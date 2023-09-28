@@ -46,5 +46,17 @@ let members = [
     favoriteFilm: "dontknow",
     favoriteBook: "La magia de dos",
     petName: "Willy",
+},
+ {
+  name: "Jaime",
+  surname: "Rodriguez",
+  age: "29",
+  city: "Barcelona",
+  hobby: "Gaming, Guitarra",
+  favoriteFood: "Ajiaco",
+  favoriteVideoGame: "LoL",
+  favoriteFilm: "Malditos Batardos",
+  favoriteBook: "Falco",
+  petName: "Natsu",
 }
 ];

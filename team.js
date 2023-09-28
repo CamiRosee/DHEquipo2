@@ -1,12 +1,26 @@
-let members = [{
-name: "Camila",
-surname: "Rodriguez",
-age: "29",
-city: "Madrid",
-hobby: "Gaming",
-favoriteFood: "Pasta",
-favoriteVideoGame: "Legend of Zelda",
-favoriteFilm: "The Notebook",
-favoriteBook: "",
-petName: "Sora",
-}]
+let members = [
+  {
+    name: "Manuel",
+    surname: "Benitez",
+    age: "29",
+    city: "Palma",
+    hobby: "Skate",
+    favoriteFood: "Milanesa",
+    favoriteVideoGame: "DOTA 2",
+    favoriteFilm: "",
+    favoriteBook: "Shantaram",
+    petName: "",
+  },
+  {
+    name: "Camila",
+    surname: "Rodriguez",
+    age: "29",
+    city: "Madrid",
+    hobby: "Gaming",
+    favoriteFood: "Pasta",
+    favoriteVideoGame: "Legend of Zelda",
+    favoriteFilm: "The Notebook",
+    favoriteBook: "",
+    petName: "Sora",
+  },
+];

@@ -59,4 +59,16 @@ let members = [
   favoriteBook: "Falco",
   petName: "Natsu",
 }
+{
+ name: "Jose",
+ surname: "Calero",
+ age: "28",
+ city: "La Laguna",
+ hobby: "Literature, sports",
+ favoriteFood: "Arepa",
+ favoriteVideoGame: "Age of Empires",
+ favoriteFilm: "The Good, The Bad and the Ugly",
+ favoriteBook: "Don Quijote",
+ petName: "",
+}
 ];

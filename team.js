@@ -58,7 +58,7 @@ let members = [
   favoriteFilm: "Malditos Batardos",
   favoriteBook: "Falco",
   petName: "Natsu",
-}
+},
 {
  name: "Jose",
  surname: "Calero",

@@ -1,43 +1,3 @@
-
-let members = [
-  {
-    name: "Manuel",
-    surname: "Benitez",
-    age: "29",
-    city: "Palma",
-    hobby: "Skate",
-    favoriteFood: "Milanesa",
-    favoriteVideoGame: "DOTA 2",
-    favoriteFilm: "",
-    favoriteBook: "Shantaram",
-    petName: "",
-  },
-  {
-    name: "Camila",
-    surname: "Rodriguez",
-    age: "29",
-    city: "Madrid",
-    hobby: "Gaming",
-    favoriteFood: "Pasta",
-    favoriteVideoGame: "Legend of Zelda",
-    favoriteFilm: "The Notebook",
-    favoriteBook: "",
-    petName: "Sora",
-  },
-  {
-    name: "Maria Cortes",
-    surname: "mariacortesv",
-    age: "30",
-    city: "Barcelona",
-    hobby: "VideoGames, Anime",
-    favoriteFood: "Ramen",
-    favoriteVideoGame: "Danganronpa",
-    favoriteFilm: "Harry Potter",
-    favoriteBook: "Me gustan mucho",
-    petName: "Akira y Matty",
-}
-];
-
 let members = [
   {
     name: "Manuel",
@@ -112,3 +72,29 @@ let members = [
  petName: "",
 }
 ];
+
+
+/*members.sort(function (a, b) {
+  if (a.surname < b.surname) {
+    return -1;
+  }
+  if (a.surname > b.surname) {
+    return 1;
+  }
+  return 0;
+});
+
+console.log(members);*/
+
+// Print who wrote ‘LOL’ or ‘League Of Legends’ as a favorite video game. (name). —> Maria (yo)
+
+let persona = members.reduce (function (nombre){
+return (nombre = members.name) ? favoriteVideoGame = "LoL" : "nose"
+})
+
+console.log (persona)
+
+let personaNombre = members
+for (let members= 0; members<personaNombre; members++){
+  console.log(personaNombre[members])
+}

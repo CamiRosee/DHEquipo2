@@ -59,30 +59,54 @@ let members = [
   favoriteBook: "Falco",
   petName: "Natsu",
 },
-{
- name: "Jose",
- surname: "Calero",
- age: "28",
- city: "La Laguna",
- hobby: "Literature, sports",
- favoriteFood: "Arepa",
- favoriteVideoGame: "Age of Empires",
- favoriteFilm: "The Good, The Bad and the Ugly",
- favoriteBook: "Don Quijote",
- petName: "",
+  {
+  name: "Jose",
+  surname: "Calero",
+  age: "28",
+  city: "La Laguna",
+  hobby: "Literature, sports",
+  favoriteFood: "Arepa",
+  favoriteVideoGame: "Age of Empires",
+  favoriteFilm: "The Good, The Bad and the Ugly",
+  favoriteBook: "Don Quijote",
+  petName: "",
 }
 ];
 
+let surnameOrder= [];
+let ageOrder = [];
+let sumaEdad=0;
 
-members.sort(function (a, b) {
-  if (a.surname < b.surname) {
-    return -1;
+function checkSurname (apellido){
+  if(typeof(apellido.surname) == "string"){
+    surnameOrder.push(apellido.surname+" " +apellido.name);
   }
-  if (a.surname > b.surname) {
-    return 1;
+}
+
+function checkAge (edad) {
+  if(typeof(edad.age) == "string"){
+    ageOrder.push(edad.age+" " +edad.name)
+    ageOrder.sort()
   }
-  return 0;
-});
+}
 
-console.log(members);
+function sumar(){
+  for(i=0;i<members.length;i++){
+   sumaEdad = sumaEdad + Number(members[i].age);
+  } 
+  return (sumaEdad / 6)
+}
 
+function x () {
+  for(i=0;i<members.length;i++){
+    checkSurname(members[i]);
+    checkAge(members[i]);
+  }
+ // console.log(surnameOrder);
+}
+
+x()
+
+console.log(surnameOrder.sort());
+console.log(ageOrder.sort());
+console.log(sumar());

@@ -24,8 +24,8 @@ let members = [
     petName: "Sora",
   },
   {
-    name: "Maria Cortes",
-    surname: "mariacortesv",
+    name: "Maria",
+    surname: "Cortes",
     age: "30",
     city: "Barcelona",
     hobby: "VideoGames, Anime",
@@ -72,3 +72,17 @@ let members = [
  petName: "",
 }
 ];
+
+
+members.sort(function (a, b) {
+  if (a.surname < b.surname) {
+    return -1;
+  }
+  if (a.surname > b.surname) {
+    return 1;
+  }
+  return 0;
+});
+
+console.log(members);
+

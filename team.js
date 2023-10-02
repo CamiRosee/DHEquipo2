@@ -24,7 +24,7 @@ let members = [
     petName: "Sora",
   },
   {
-    name: "Maria",
+    name: "Camila",
     surname: "Cortes",
     age: "30",
     city: "Barcelona",
@@ -36,7 +36,7 @@ let members = [
     petName: "Akira y Matty",
 },
   {
-    name: "Denise",
+    name: "Camila",
     surname: "Cantos",
     age: "24",
     city: "Barcelona",
@@ -107,6 +107,58 @@ function x () {
 
 x()
 
+function checkPet(arr){
+  let havePet = [];
+  for(i=0; i < members.length; i++){
+    let memberPet = members[i].name + ": " + members[i].petName;
+    if(members[i].petName){
+      havePet.push(memberPet);
+    }
+  }
+  return havePet;
+}
+
+function checkGame(arr){
+  let gameLol = [];
+  for(i = 0; i < members.length; i++){
+    let memberLol = members[i].name + " is a LoL fan";
+    if(members[i].favoriteVideoGame === "LoL" || members[i].favoriteVideoGame === "League of Legends" ){
+      gameLol.push(memberLol);
+    }
+  }
+  return gameLol;
+}
+
+function checkNames(arr){
+  let repeatedNames = [];
+  // let timesNames = {}
+  
+  for(i = 0; i < members.length; i++){
+    let countName = 1;
+    let sameName = members[i].name;
+    for(j = 0; j < members.length; j++){
+      if(i !== j){
+        if(members[j].name == members[i].name){
+          countName++;
+          
+        }else{
+          let countName = 1;
+        }
+        if(countName == 2){
+          repeatedNames.push(sameName);
+          break;
+        }
+      }
+      
+  }
+  
+}return repeatedNames;
+}
+
+
 console.log(surnameOrder.sort());
 console.log(ageOrder.sort());
-console.log(sumar());
+console.log("Middle age: " + sumar());
+console.log(checkPet(members));
+console.log(checkGame(members));
+console.log(checkNames(members));

@@ -24,8 +24,8 @@ let members = [
     petName: "Sora",
   },
   {
-    name: "Maria Cortes",
-    surname: "mariacortesv",
+    name: "Maria",
+    surname: "Cortes",
     age: "30",
     city: "Barcelona",
     hobby: "VideoGames, Anime",
@@ -58,17 +58,33 @@ let members = [
   favoriteFilm: "Malditos Batardos",
   favoriteBook: "Falco",
   petName: "Natsu",
-}
-{
- name: "Jose",
- surname: "Calero",
- age: "28",
- city: "La Laguna",
- hobby: "Literature, sports",
- favoriteFood: "Arepa",
- favoriteVideoGame: "Age of Empires",
- favoriteFilm: "The Good, The Bad and the Ugly",
- favoriteBook: "Don Quijote",
- petName: "",
+},
+  {
+  name: "Jose",
+  surname: "Calero",
+  age: "28",
+  city: "La Laguna",
+  hobby: "Literature, sports",
+  favoriteFood: "Arepa",
+  favoriteVideoGame: "Age of Empires",
+  favoriteFilm: "The Good, The Bad and the Ugly",
+  favoriteBook: "Don Quijote",
+  petName: "",
 }
 ];
+
+console.log("Print who has a pet (name petName)");
+
+let arrayPets = [];
+let arrayOwners = [];
+
+for(i=0; i<members.length; i += 1){
+  if(members[i].petName != ""){
+    arrayOwners.push(members[i].name);
+    arrayPets.push(members[i].petName);
+  }
+}
+
+for (i=0; i < arrayPets.length; i += 1) {
+  console.log(arrayOwners[i] + " tiene a " + arrayPets[i])};
+

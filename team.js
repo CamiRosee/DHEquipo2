@@ -73,28 +73,27 @@ let members = [
 }
 ];
 
-
-/*members.sort(function (a, b) {
-  if (a.surname < b.surname) {
-    return -1;
-  }
-  if (a.surname > b.surname) {
-    return 1;
-  }
-  return 0;
-});
-
-console.log(members);*/
-
 // Print who wrote ‘LOL’ or ‘League Of Legends’ as a favorite video game. (name). —> Maria (yo)
-
-let persona = members.reduce (function (nombre){
-return (nombre = members.name) ? favoriteVideoGame = "LoL" : "nose"
-})
-
-console.log (persona)
-
-let personaNombre = members
-for (let members= 0; members<personaNombre; members++){
-  console.log(personaNombre[members])
+//PRIMERA OP (Maria)
+for (let i = 0; i < members.length; i++){
+  switch (members[i].favoriteVideoGame){
+    case "LoL":
+      console.log(members[i].name);
+      console.log("Es su Juego favorito");
+      break;
+      default:
+        console.log()
+  }
 }
+
+//SEGUNDA OP (Maria)
+members.forEach(function(persona){
+  switch (persona.favoriteVideoGame){
+    case "LoL":
+      console.log(persona.name);
+      console.log("Es su Juego favorito ");
+      break;
+      default:
+        console.log()
+  }
+})

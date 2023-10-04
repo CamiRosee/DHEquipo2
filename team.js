@@ -98,7 +98,14 @@ function checkSurname (apellido){
    }
  }
 
- function checkAge (edad) {
+
+function checkSurname (apellido){
+  if(typeof(apellido.surname) == "string"){
+    surnameOrder.push(apellido.surname+" " +apellido.name);
+  }
+}
+
+function checkAge (edad) {
   if(typeof(edad.age) == "string"){
     ageOrder.push(edad.age+" " +edad.name)
     ageOrder.sort()
@@ -122,28 +129,35 @@ function x () {
 
 x()
 
-function checkPet(arr){
-  let havePet = [];
-  for(i=0; i < members.length; i++){
-    let memberPet = members[i].name + ": " + members[i].petName;
-    if(members[i].petName){
-      havePet.push(memberPet);
-    }
+//console.log("Print who has a pet (name petName)");
+
+let arrayPets = [];
+let arrayOwners = [];
+
+for(i=0; i<members.length; i += 1){
+  if(members[i].petName != ""){
+    arrayOwners.push(members[i].name);
+    arrayPets.push(members[i].petName);
   }
-  return havePet;
 }
 
-function checkGame(arr){
-  let gameLol = [];
-  for(i = 0; i < members.length; i++){
-    let memberLol = members[i].name + " is a LoL fan";
-    if(members[i].favoriteVideoGame === "LoL" || members[i].favoriteVideoGame === "League of Legends" ){
-      gameLol.push(memberLol);
-    }
-  }
-  return gameLol;
-}
+for (i=0; i < arrayPets.length; i += 1) {
+  console.log(arrayOwners[i] + " tiene a " + arrayPets[i])};
 
+// Print who wrote ‘LOL’ or ‘League Of Legends’ as a favorite video game. (name). —> Maria (yo)
+//(Maria)
+members.forEach(function(persona){
+  switch (persona.favoriteVideoGame){
+    case "LoL":
+      console.log(persona.name);
+      console.log("Es su Juego favorito ");
+      break;
+      default:
+        console.log()
+  }
+})
+
+//Denise check name
 function checkNames(arr){
   let repeatedNames = [];
   
@@ -164,15 +178,14 @@ function checkNames(arr){
         }
       }
       
-  }
+    }
   
-}return repeatedNames;
+  }return repeatedNames;
 }
 
+//End Denise check name
 
 console.log(surnameOrder.sort());
 console.log(ageOrder.sort());
 console.log("Middle age: " + sumar());
-console.log(checkPet(members));
-console.log(checkGame(members));
 console.log(checkNames(members));

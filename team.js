@@ -73,6 +73,45 @@ let members = [
 }
 ];
 
+
+let surnameOrder= [];
+let ageOrder = [];
+let sumaEdad=0;
+
+function checkSurname (apellido){
+  if(typeof(apellido.surname) == "string"){
+    surnameOrder.push(apellido.surname+" " +apellido.name);
+  }
+}
+
+function checkAge (edad) {
+  if(typeof(edad.age) == "string"){
+    ageOrder.push(edad.age+" " +edad.name)
+    ageOrder.sort()
+  }
+}
+
+function sumar(){
+  for(i=0;i<members.length;i++){
+   sumaEdad = sumaEdad + Number(members[i].age);
+  } 
+  return (sumaEdad / 6)
+}
+
+function x () {
+  for(i=0;i<members.length;i++){
+    checkSurname(members[i]);
+    checkAge(members[i]);
+  }
+ // console.log(surnameOrder);
+}
+
+x()
+
+console.log(surnameOrder.sort());
+console.log(ageOrder.sort());
+console.log(sumar());
+
 console.log("Print who has a pet (name petName)");
 
 let arrayPets = [];
@@ -87,4 +126,3 @@ for(i=0; i<members.length; i += 1){
 
 for (i=0; i < arrayPets.length; i += 1) {
   console.log(arrayOwners[i] + " tiene a " + arrayPets[i])};
-

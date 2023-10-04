@@ -110,3 +110,19 @@ x()
 console.log(surnameOrder.sort());
 console.log(ageOrder.sort());
 console.log(sumar());
+
+
+
+// Print who wrote ‘LOL’ or ‘League Of Legends’ as a favorite video game. (name). —> Maria (yo)
+//(Maria)
+members.forEach(function(persona){
+  switch (persona.favoriteVideoGame){
+    case "LoL":
+      console.log(persona.name);
+      console.log("Es su Juego favorito ");
+      break;
+      default:
+        console.log()
+  }
+})
+

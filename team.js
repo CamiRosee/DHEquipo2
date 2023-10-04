@@ -24,7 +24,7 @@ let members = [
     petName: "Sora",
   },
   {
-    name: "Camila",
+    name: "Maria",
     surname: "Cortes",
     age: "30",
     city: "Barcelona",
@@ -36,7 +36,7 @@ let members = [
     petName: "Akira y Matty",
 },
   {
-    name: "Camila",
+    name: "Denise",
     surname: "Cantos",
     age: "24",
     city: "Barcelona",
@@ -77,13 +77,28 @@ let surnameOrder= [];
 let ageOrder = [];
 let sumaEdad=0;
 
-function checkSurname (apellido){
-  if(typeof(apellido.surname) == "string"){
-    surnameOrder.push(apellido.surname+" " +apellido.name);
-  }
-}
+// function checkSurnameRefactored(arrayOfMembers) {
+//   const sortedArray = arrayOfMembers.sort((prevMember, nextMember) => {
+//     if (prevMember.surname < nextMember.surname) {
+//       return -1;
+//     } else if (prevMember.surname > nextMember.surname) {
+//       return 1;
+//     }
+//   }); //como diferencia/itera con prev y nextmember
 
-function checkAge (edad) {
+//   return sortedArray;
+// }
+
+// const result = checkSurnameRefactored(members);
+// console.log(result);
+
+function checkSurname (apellido){
+   if(typeof(apellido.surname) == "string"){
+     surnameOrder.push(apellido.surname+" " +apellido.name);
+   }
+ }
+
+ function checkAge (edad) {
   if(typeof(edad.age) == "string"){
     ageOrder.push(edad.age+" " +edad.name)
     ageOrder.sort()
@@ -94,7 +109,7 @@ function sumar(){
   for(i=0;i<members.length;i++){
    sumaEdad = sumaEdad + Number(members[i].age);
   } 
-  return (sumaEdad / 6)
+  return (sumaEdad / members.length)
 }
 
 function x () {
@@ -131,7 +146,6 @@ function checkGame(arr){
 
 function checkNames(arr){
   let repeatedNames = [];
-  // let timesNames = {}
   
   for(i = 0; i < members.length; i++){
     let countName = 1;

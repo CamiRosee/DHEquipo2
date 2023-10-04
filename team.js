@@ -73,10 +73,31 @@ let members = [
 }
 ];
 
-
 let surnameOrder= [];
 let ageOrder = [];
 let sumaEdad=0;
+
+// function checkSurnameRefactored(arrayOfMembers) {
+//   const sortedArray = arrayOfMembers.sort((prevMember, nextMember) => {
+//     if (prevMember.surname < nextMember.surname) {
+//       return -1;
+//     } else if (prevMember.surname > nextMember.surname) {
+//       return 1;
+//     }
+//   }); //como diferencia/itera con prev y nextmember
+
+//   return sortedArray;
+// }
+
+// const result = checkSurnameRefactored(members);
+// console.log(result);
+
+function checkSurname (apellido){
+   if(typeof(apellido.surname) == "string"){
+     surnameOrder.push(apellido.surname+" " +apellido.name);
+   }
+ }
+
 
 function checkSurname (apellido){
   if(typeof(apellido.surname) == "string"){
@@ -95,7 +116,7 @@ function sumar(){
   for(i=0;i<members.length;i++){
    sumaEdad = sumaEdad + Number(members[i].age);
   } 
-  return (sumaEdad / 6)
+  return (sumaEdad / members.length)
 }
 
 function x () {
@@ -108,11 +129,7 @@ function x () {
 
 x()
 
-console.log(surnameOrder.sort());
-console.log(ageOrder.sort());
-console.log(sumar());
-
-console.log("Print who has a pet (name petName)");
+//console.log("Print who has a pet (name petName)");
 
 let arrayPets = [];
 let arrayOwners = [];
@@ -140,3 +157,35 @@ members.forEach(function(persona){
   }
 })
 
+//Denise check name
+function checkNames(arr){
+  let repeatedNames = [];
+  
+  for(i = 0; i < members.length; i++){
+    let countName = 1;
+    let sameName = members[i].name;
+    for(j = 0; j < members.length; j++){
+      if(i !== j){
+        if(members[j].name == members[i].name){
+          countName++;
+          
+        }else{
+          let countName = 1;
+        }
+        if(countName == 2){
+          repeatedNames.push(sameName);
+          break;
+        }
+      }
+      
+    }
+  
+  }return repeatedNames;
+}
+
+//End Denise check name
+
+console.log(surnameOrder.sort());
+console.log(ageOrder.sort());
+console.log("Middle age: " + sumar());
+console.log(checkNames(members));

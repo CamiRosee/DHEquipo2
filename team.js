@@ -126,3 +126,17 @@ for(i=0; i<members.length; i += 1){
 
 for (i=0; i < arrayPets.length; i += 1) {
   console.log(arrayOwners[i] + " tiene a " + arrayPets[i])};
+
+// Print who wrote ‘LOL’ or ‘League Of Legends’ as a favorite video game. (name). —> Maria (yo)
+//(Maria)
+members.forEach(function(persona){
+  switch (persona.favoriteVideoGame){
+    case "LoL":
+      console.log(persona.name);
+      console.log("Es su Juego favorito ");
+      break;
+      default:
+        console.log()
+  }
+})
+
